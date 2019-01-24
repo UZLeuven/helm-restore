@@ -4,7 +4,7 @@ import (
 	"errors"
 	"os"
 
-	restore "github.com/maorfr/helm-restore/pkg"
+	restore "github.com/UZLeuven/helm-restore/pkg"
 	"github.com/spf13/cobra"
 )
 

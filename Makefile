@@ -9,7 +9,7 @@ LDFLAGS := "-X main.version=${VERSION}"
 
 .PHONY: install
 install: bootstrap build
-	cp ${HELM_PLUGIN_NAME} $(HELM_PLUGIN_DIR)
+	cp bin/${HELM_PLUGIN_NAME} $(HELM_PLUGIN_DIR)
 	cp plugin.yaml $(HELM_PLUGIN_DIR)
 
 .PHONY: hookInstall
