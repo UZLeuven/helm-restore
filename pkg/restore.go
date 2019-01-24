@@ -30,7 +30,7 @@ func Restore(releaseName, tillerNamespace, label string) error {
 	if err := ioutil.WriteFile(fileName, []byte(releases[0].Manifest), 0644); err != nil {
 		return err
 	}
-	applyCmd := []string{"kubectl", "apply", "--namespace", releases[0].Namespace, "-f", fileName}
+	applyCmd := []string{"oc", "apply", "--namespace", releases[0].Namespace, "-f", fileName}
 	output := utils.Execute(applyCmd)
 	for _, line := range strings.Split((string)(output), "\n") {
 		if line == "" {
