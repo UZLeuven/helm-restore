@@ -28,7 +28,7 @@ func main() {
 	}
 
 	f := cmd.Flags()
-	f.StringVar(&tillerNamespace, "tiller-namespace", "kube-system", "namespace of Tiller")
+	f.StringVar(&tillerNamespace, "tiller-ns", os.Getenv("TILLER_NAMESPACE"), "namespace of Tiller")
 	f.StringVarP(&label, "label", "l", "OWNER=TILLER,STATUS=DEPLOYED", "label to select tiller resources by")
 
 	if err := cmd.Execute(); err != nil {
