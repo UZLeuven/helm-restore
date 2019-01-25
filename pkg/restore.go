@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"strings"
+	"strconv"
 
 	utils "github.com/maorfr/helm-plugin-utils/pkg"
 )
@@ -25,7 +26,7 @@ func Restore(releaseName, tillerNamespace, label string) error {
 		return fmt.Errorf("%s has no deployed releases", releaseName)
 	}
 
-	fileName := "/tmp/helm-restore-manifests."+os.Getpid()+".yaml"
+	fileName := "/tmp/helm-restore-manifests."+strconv.Itoa(os.Getpid())+".yaml"
 	os.Remove(fileName)
 	if err := ioutil.WriteFile(fileName, []byte(releases[0].Manifest), 0644); err != nil {
 		return err
