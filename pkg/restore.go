@@ -25,7 +25,7 @@ func Restore(releaseName, tillerNamespace, label string) error {
 		return fmt.Errorf("%s has no deployed releases", releaseName)
 	}
 
-	fileName := "manifests.yaml"
+	fileName := "/tmp/helm-restore-manifests."+os.Getpid()+".yaml"
 	os.Remove(fileName)
 	if err := ioutil.WriteFile(fileName, []byte(releases[0].Manifest), 0644); err != nil {
 		return err
@@ -38,6 +38,6 @@ func Restore(releaseName, tillerNamespace, label string) error {
 		}
 		log.Print(line)
 	}
-	os.Remove(fileName)
+	//os.Remove(fileName)
 	return nil
 }
