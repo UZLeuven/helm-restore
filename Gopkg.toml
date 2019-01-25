@@ -1,9 +1,5 @@
 
 [[constraint]]
-  name = "github.com/maorfr/helm-plugin-utils"
-  version = "0.1.0"
-
-[[constraint]]
   name = "github.com/spf13/cobra"
   version = "0.0.3"
 
