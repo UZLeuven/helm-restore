@@ -138,14 +138,6 @@
   version = "1.1.4"
 
 [[projects]]
-  digest = "1:ec6f586e34d38ffb17cba1017ecf1409b0fe445e390fd0e9120a5d14b1381b2c"
-  name = "github.com/maorfr/helm-plugin-utils"
-  packages = ["pkg"]
-  pruneopts = "UT"
-  revision = "f913b718a67df562b370bb6fdaad902430446f33"
-  version = "0.1.0"
-
-[[projects]]
   digest = "1:33422d238f147d247752996a26574ac48dcf472976eda7f5134015f06bf16563"
   name = "github.com/modern-go/concurrent"
   packages = ["."]
